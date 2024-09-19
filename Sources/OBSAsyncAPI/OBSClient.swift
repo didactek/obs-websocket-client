@@ -145,8 +145,7 @@ public actor OBSClient {
     /// Creates a client for communicating with an obs-websocket server.
     ///
     /// - Parameters:
-    /// 
-    ///   - hostame: Server hostname; "localhost" if nil.
+    ///   - hostname: Server hostname; "localhost" if nil.
     ///   - port: Server port; 4455 if nil.
     ///   - connectTimeout: Override default connect timeout.
     ///   - password: Server password, or nil if authentication is not enabled.
@@ -165,8 +164,8 @@ public actor OBSClient {
         self.eventSubscriptions = eventSubscriptions
     }
     
-    private func listenForMessages() {
-        webSocketTask!.receive { [unowned self] result in
+    private func processMessage(result: Result<URLSessionWebSocketTask.Message, any Error>) {
+        do {  // FIXME: remove 'do' (here to preserve indentation from when this code was in listenForMessages)
             switch result {
             case .success(let message):
                 switch message {
@@ -217,6 +216,13 @@ public actor OBSClient {
                 logger.debug("Failure message from server: \(error)")
                 connectionClosed()
             }
+        }
+    }
+
+    private func listenForMessages() {
+        webSocketTask!.receive { [unowned self] result in
+            // FIXME: adapt webSocketTask callback to actor-isolated context
+            self.processMessage(result: result)
         }
     }
     
