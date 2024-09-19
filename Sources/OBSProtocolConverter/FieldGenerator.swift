@@ -17,7 +17,11 @@ protocol FieldSpec {
 }
 
 extension OBSWebservicesDescription.ResponseField: FieldSpec {
-    var valueOptional: Bool { get { false } }
+    /// Optional response values are not explicitly indicated by the protocol,
+    /// but the description generally describes a null return.
+    var valueOptional: Bool { get {
+        valueDescription.contains(OBSWebservicesDescription.nullReturnDocumentation)
+    } }
 }
 
 extension OBSWebservicesDescription.RequestField: FieldSpec {

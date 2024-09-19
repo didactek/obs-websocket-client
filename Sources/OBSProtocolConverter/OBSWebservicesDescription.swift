@@ -10,6 +10,11 @@
 import Foundation
 
 public struct OBSWebservicesDescription: Codable {
+    /// Optional values in responses or events are not explicitly indicated by the protocol,
+    /// but the description generally describes a null return. Pattern that should identify
+    /// these cases.
+    static let nullReturnDocumentation = #/`null`|Can be null/#
+
     public struct EnumCase: Codable {
         let description: String
         let enumIdentifier: String

@@ -33,7 +33,7 @@ struct EventGenerator {
         case "RecordStateChanged":
             replacement = [
                 FieldReplacement(name: "outputState", originalType: "String", replacementType: "ObsOutputState"),
-                FieldReplacement(name: "outputPath", originalType: "String", replacementType: "String", valueOptional: true),
+//                FieldReplacement(name: "outputPath", originalType: "String", replacementType: "String", valueOptional: true),
                 ]
         default:
             replacement = nil
@@ -91,5 +91,7 @@ struct EventGenerator {
 }
 
 extension OBSWebservicesDescription.DataField: FieldSpec {
-    var valueOptional: Bool { false }
+    var valueOptional: Bool {
+        valueDescription.contains(OBSWebservicesDescription.nullReturnDocumentation)
+    }
 }
