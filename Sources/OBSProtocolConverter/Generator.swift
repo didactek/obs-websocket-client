@@ -294,7 +294,8 @@ public struct Generator {
     
     /// Convert comment into DocC block.
     ///
-    /// - Parameter indentLevel: number of 4-space indents to prefix to string
+    /// - Parameter comment: Text to be turned into a documentation comment.
+    /// - Parameter indentLevel: Number of 4-space indents to prefix to each line of comment text.
     static func docC(comment: String, indentLevel: Int = 1) -> String {
         let prefix = String(repeating: " ", count: 4 * indentLevel).appending("/// ")
         return comment

@@ -145,6 +145,7 @@ public actor OBSClient {
     /// Creates a client for communicating with an obs-websocket server.
     ///
     /// - Parameters:
+    /// 
     ///   - hostame: Server hostname; "localhost" if nil.
     ///   - port: Server port; 4455 if nil.
     ///   - connectTimeout: Override default connect timeout.
