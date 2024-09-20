@@ -165,64 +165,67 @@ public actor OBSClient {
     }
     
     private func processMessage(result: Result<URLSessionWebSocketTask.Message, any Error>) {
-        do {  // FIXME: remove 'do' (here to preserve indentation from when this code was in listenForMessages)
-            switch result {
-            case .success(let message):
-                switch message {
-                case .string(let text):
-                    do {
-                        let decoder = JSONDecoder()
-                        let opcode = try decoder.decode(OpCode.self, from: text.data(using: .utf8)!)
-                        logger.trace("listenForMessages decoded opcode: \(opcode)")
-                        switch opcode {
-                        case .hello(let requirements):
-                            identify(authRequirement: requirements.authentication)
-                        case .identify:
-                            logger.warning("Server sent Identify message (usually made by client).")
-                        case .identified:
-                            isConnected.value = true
-                        case .reidentify:
-                            logger.warning("Server sent Identify message (usually made by client).")
-                        case .event(let event):
-                            events.send(event)
-                        case .request:
-                            logger.warning("Server sent request (usually made by client).")
-                        case .response(let response):
-                            processResponse(response: response)
-                        case .requestBatch:
-                            logger.warning("Server sent batch request message (usually made by client).")
-                        case .requestBatchResponse:
-                            logger.warning("Server sent batch response message (client batch requests are not implemented).")
-                        }
-                    } catch OBSWebsocketError.identifiedResponse(let abc, let encapsulatedError) {
-                        guard let uuid = UUID(uuidString: abc),
-                              let requestContinuation = pending.removeValue(forKey: uuid)
-                        else {
-                            logger.debug("Caught error for unknown requestId \(abc). Ignoring.")
-                            logger.trace("Ignored error \(encapsulatedError) came parsing \(text).")
-                            break
-                        }
-                        requestContinuation.resume(throwing: APIError.jsonParseError(encapsulateError: encapsulatedError, source: text))
-                    } catch {
-                        logger.debug("listenForMessages: failed parse: \(text)")
+        switch result {
+        case .success(let message):
+            switch message {
+            case .string(let text):
+                do {
+                    let decoder = JSONDecoder()
+                    let opcode = try decoder.decode(OpCode.self, from: text.data(using: .utf8)!)
+                    logger.trace("listenForMessages decoded opcode: \(opcode)")
+                    switch opcode {
+                    case .hello(let requirements):
+                        identify(authRequirement: requirements.authentication)
+                    case .identify:
+                        logger.warning("Server sent Identify message (usually made by client).")
+                    case .identified:
+                        isConnected.value = true
+                    case .reidentify:
+                        logger.warning("Server sent Identify message (usually made by client).")
+                    case .event(let event):
+                        events.send(event)
+                    case .request:
+                        logger.warning("Server sent request (usually made by client).")
+                    case .response(let response):
+                        processResponse(response: response)
+                    case .requestBatch:
+                        logger.warning("Server sent batch request message (usually made by client).")
+                    case .requestBatchResponse:
+                        logger.warning("Server sent batch response message (client batch requests are not implemented).")
                     }
-                case .data:
-                    logger.warning("expected JSON text; got raw data")
-                default:
-                    logger.warning("unexpected websocket encoding received")
+                } catch OBSWebsocketError.identifiedResponse(let abc, let encapsulatedError) {
+                    guard let uuid = UUID(uuidString: abc),
+                          let requestContinuation = pending.removeValue(forKey: uuid)
+                    else {
+                        logger.debug("Caught error for unknown requestId \(abc). Ignoring.")
+                        logger.trace("Ignored error \(encapsulatedError) came parsing \(text).")
+                        break
+                    }
+                    requestContinuation.resume(throwing: APIError.jsonParseError(encapsulateError: encapsulatedError, source: text))
+                } catch {
+                    logger.debug("listenForMessages: failed parse: \(text)")
                 }
-                listenForMessages()
-            case .failure(let error):
-                logger.debug("Failure message from server: \(error)")
-                connectionClosed()
+            case .data:
+                logger.warning("expected JSON text; got raw data")
+            default:
+                logger.warning("unexpected websocket encoding received")
             }
+            listenForMessages()
+        case .failure(let error):
+            logger.debug("Failure message from server: \(error)")
+            connectionClosed()
         }
     }
 
     private func listenForMessages() {
         webSocketTask!.receive { [unowned self] result in
-            // FIXME: adapt webSocketTask callback to actor-isolated context
-            self.processMessage(result: result)
+            // Confirm this explanation:
+            // WebSocketTask is actor un-aware, and will choose its original
+            // thread. This may no longer appropriate for this actor, and will
+            // not have the actor entrance/exit code.
+            Task {
+                await self.processMessage(result: result)
+            }
         }
     }
     
