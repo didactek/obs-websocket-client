@@ -37,7 +37,7 @@ public enum APIError: Error {
 public actor OBSClient {
     
     /// An encapsulation of parameters needed to connect ot OBS.
-    public struct ConnectionInfo: Codable, Equatable  {
+    public struct ConnectionInfo: Codable, Equatable, Sendable  {
         /// Server hostname or address; "localhost" if nil.
         public var host: String?
 

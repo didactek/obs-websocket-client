@@ -8,17 +8,17 @@
 //
 
 
-public struct IndexedScene: Codable {
+public struct IndexedScene: Codable, Sendable {
     public let sceneIndex: Int
     public let sceneName: String
 }
 
-public struct IndexedSceneItem: Codable {
+public struct IndexedSceneItem: Codable, Sendable {
     public let sceneItemId: Int
     public let sceneItemIndex: Int
 }
 
-public struct SceneSource: Codable, Equatable {
+public struct SceneSource: Codable, Equatable, Sendable {
     public let sceneItemId: Int
     public let sceneItemIndex: Int
     public let sourceName: String
@@ -31,11 +31,11 @@ public struct SceneSource: Codable, Equatable {
     public let sceneItemEnabled: Bool
 }
 
-public enum OBSBoundsType: String, Codable {
+public enum OBSBoundsType: String, Codable, Sendable {
     case none = "OBS_BOUNDS_NONE"
 }
 
-public enum ItemAlignment: Int, Codable {
+public enum ItemAlignment: Int, Codable, Sendable {
     case topLeft = 5
     case topCenter = 4
     case topRight = 6
@@ -49,7 +49,7 @@ public enum ItemAlignment: Int, Codable {
 
 // FIXME: split into request and response; options like width don't have effect in request; research and remove
 // FIXME: OR: remove read-only items from public initializer...
-public struct SceneItemTransform: Codable, Equatable {
+public struct SceneItemTransform: Codable, Equatable, Sendable {
     public let alignment: ItemAlignment?
     public let boundsAlignment: Int?
     public let boundsHeight: Double?
@@ -132,7 +132,7 @@ extension SceneItemTransform {
     }}
 }
 
-public struct KeyModifiers: Codable {
+public struct KeyModifiers: Codable, Sendable {
     let shift: Bool?
     let control: Bool?
     let alt: Bool?

@@ -76,7 +76,7 @@ struct EventGenerator {
         // assuming names will be scoped in OBSEvent enum namespace:
         let name = event.eventType
         
-        var text = "    public struct \(name): Codable {\n"
+        var text = "    public struct \(name): Codable, Sendable {\n"
         text.append(fields
             .map { field in
                 return field.docC().appending("        public let \(field.valueName): \(field.type())\n")

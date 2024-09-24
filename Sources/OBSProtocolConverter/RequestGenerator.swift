@@ -181,7 +181,7 @@ struct RequestGenerator {
         let name = request.requestType
         guard !noReturnValue else { return "    // \(name) returns no values\n" }
         
-        var text = "    public struct \(name): Codable {\n"
+        var text = "    public struct \(name): Codable, Sendable {\n"
         text.append(responseFields
             .map { field in
                 return field.docC().appending("        public let \(field.valueName): \(field.type())\n")

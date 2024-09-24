@@ -89,7 +89,7 @@ public struct Generator {
     }
     
     func events() -> String {
-        var src = "public enum OBSEvent {\n"
+        var src = "public enum OBSEvent: Sendable {\n"
         src.append(eventGenerators.map{$0.eventEnum()}.joined(separator: "\n"))
         src.append(eventGenerators.compactMap{$0.eventStruct()}.joined(separator: "\n"))
         src.append("}\n")
@@ -141,7 +141,7 @@ public struct Generator {
     }
     
     func responses() -> String {
-        var src = "public enum OBSResponse {\n    case empty\n\n"
+        var src = "public enum OBSResponse: Sendable {\n    case empty\n\n"
 
         src.append(requestGenerators.map {$0.responseEnum()}.joined(separator: "\n"))
         
