@@ -23,7 +23,7 @@ import Foundation
 
 
 /// Value for ``OBSUntypedObject`` dictionaries.
-public enum OBSUntypedValue: Codable {
+public enum OBSUntypedValue: Codable, Sendable {
     case string(String)
     case number(Double)
     case nested(OBSUntypedObject)

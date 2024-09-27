@@ -26,7 +26,7 @@ struct EnumGenerator {
         let type = raw.contains(where: { isInt(enumCase: $0) == nil }) ? "String" : "Int"
         
         return """
-        public enum \(spec.enumType): \(type), Codable {
+        public enum \(spec.enumType): \(type), Codable, Sendable {
         \(cases)
         }
         """
