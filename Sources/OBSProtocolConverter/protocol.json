@@ -11,7 +11,6 @@
           "initialVersion": "5.0.0",
           "enumValue": 0
         },
-        
         {
           "description": "Subscription value to receive events in the `General` category.",
           "enumIdentifier": "General",
@@ -239,6 +238,14 @@
           "enumValue": 206
         },
         {
+          "description": "The server is not ready to handle the request.\n\nNote: This usually occurs during OBS scene collection change or exit. Requests may be tried again after a delay if this code is given.",
+          "enumIdentifier": "NotReady",
+          "rpcVersion": "1",
+          "deprecated": false,
+          "initialVersion": "5.3.0",
+          "enumValue": 207
+        },
+        {
           "description": "A required request field is missing.",
           "enumIdentifier": "MissingRequestField",
           "rpcVersion": "1",
@@ -454,72 +461,72 @@
         {
           "description": "Unknown state.",
           "enumIdentifier": "OBS_WEBSOCKET_OUTPUT_UNKNOWN",
-          "rpcVersion": 1,
-          "deprecated": true,
+          "rpcVersion": "1",
+          "deprecated": false,
           "initialVersion": "5.0.0",
           "enumValue": "OBS_WEBSOCKET_OUTPUT_UNKNOWN"
         },
         {
           "description": "The output is starting.",
           "enumIdentifier": "OBS_WEBSOCKET_OUTPUT_STARTING",
-          "rpcVersion": 1,
-          "deprecated": true,
+          "rpcVersion": "1",
+          "deprecated": false,
           "initialVersion": "5.0.0",
           "enumValue": "OBS_WEBSOCKET_OUTPUT_STARTING"
         },
         {
           "description": "The input has started.",
           "enumIdentifier": "OBS_WEBSOCKET_OUTPUT_STARTED",
-          "rpcVersion": 1,
-          "deprecated": true,
+          "rpcVersion": "1",
+          "deprecated": false,
           "initialVersion": "5.0.0",
           "enumValue": "OBS_WEBSOCKET_OUTPUT_STARTED"
         },
         {
           "description": "The output is stopping.",
           "enumIdentifier": "OBS_WEBSOCKET_OUTPUT_STOPPING",
-          "rpcVersion": 1,
-          "deprecated": true,
+          "rpcVersion": "1",
+          "deprecated": false,
           "initialVersion": "5.0.0",
           "enumValue": "OBS_WEBSOCKET_OUTPUT_STOPPING"
         },
         {
           "description": "The output has stopped.",
           "enumIdentifier": "OBS_WEBSOCKET_OUTPUT_STOPPED",
-          "rpcVersion": 1,
-          "deprecated": true,
+          "rpcVersion": "1",
+          "deprecated": false,
           "initialVersion": "5.0.0",
           "enumValue": "OBS_WEBSOCKET_OUTPUT_STOPPED"
         },
         {
           "description": "The output has disconnected and is reconnecting.",
           "enumIdentifier": "OBS_WEBSOCKET_OUTPUT_RECONNECTING",
-          "rpcVersion": 1,
-          "deprecated": true,
+          "rpcVersion": "1",
+          "deprecated": false,
           "initialVersion": "5.0.0",
           "enumValue": "OBS_WEBSOCKET_OUTPUT_RECONNECTING"
         },
         {
           "description": "The output has reconnected successfully.",
           "enumIdentifier": "OBS_WEBSOCKET_OUTPUT_RECONNECTED",
-          "rpcVersion": 1,
-          "deprecated": true,
+          "rpcVersion": "1",
+          "deprecated": false,
           "initialVersion": "5.1.0",
           "enumValue": "OBS_WEBSOCKET_OUTPUT_RECONNECTED"
         },
         {
           "description": "The output is now paused.",
           "enumIdentifier": "OBS_WEBSOCKET_OUTPUT_PAUSED",
-          "rpcVersion": 1,
-          "deprecated": true,
+          "rpcVersion": "1",
+          "deprecated": false,
           "initialVersion": "5.1.0",
           "enumValue": "OBS_WEBSOCKET_OUTPUT_PAUSED"
         },
         {
           "description": "The output has been resumed (unpaused).",
           "enumIdentifier": "OBS_WEBSOCKET_OUTPUT_RESUMED",
-          "rpcVersion": 1,
-          "deprecated": true,
+          "rpcVersion": "1",
+          "deprecated": false,
           "initialVersion": "5.0.0",
           "enumValue": "OBS_WEBSOCKET_OUTPUT_RESUMED"
         }
@@ -531,56 +538,56 @@
         {
           "description": "No action.",
           "enumIdentifier": "OBS_WEBSOCKET_MEDIA_INPUT_ACTION_NONE",
-          "rpcVersion": 1,
-          "deprecated": true,
+          "rpcVersion": "1",
+          "deprecated": false,
           "initialVersion": "5.0.0",
           "enumValue": "OBS_WEBSOCKET_MEDIA_INPUT_ACTION_NONE"
         },
         {
           "description": "Play the media input.",
           "enumIdentifier": "OBS_WEBSOCKET_MEDIA_INPUT_ACTION_PLAY",
-          "rpcVersion": 1,
-          "deprecated": true,
+          "rpcVersion": "1",
+          "deprecated": false,
           "initialVersion": "5.0.0",
           "enumValue": "OBS_WEBSOCKET_MEDIA_INPUT_ACTION_PLAY"
         },
         {
           "description": "Pause the media input.",
           "enumIdentifier": "OBS_WEBSOCKET_MEDIA_INPUT_ACTION_PAUSE",
-          "rpcVersion": 1,
-          "deprecated": true,
+          "rpcVersion": "1",
+          "deprecated": false,
           "initialVersion": "5.0.0",
           "enumValue": "OBS_WEBSOCKET_MEDIA_INPUT_ACTION_PAUSE"
         },
         {
           "description": "Stop the media input.",
           "enumIdentifier": "OBS_WEBSOCKET_MEDIA_INPUT_ACTION_STOP",
-          "rpcVersion": 1,
-          "deprecated": true,
+          "rpcVersion": "1",
+          "deprecated": false,
           "initialVersion": "5.0.0",
           "enumValue": "OBS_WEBSOCKET_MEDIA_INPUT_ACTION_STOP"
         },
         {
           "description": "Restart the media input.",
           "enumIdentifier": "OBS_WEBSOCKET_MEDIA_INPUT_ACTION_RESTART",
-          "rpcVersion": 1,
-          "deprecated": true,
+          "rpcVersion": "1",
+          "deprecated": false,
           "initialVersion": "5.0.0",
           "enumValue": "OBS_WEBSOCKET_MEDIA_INPUT_ACTION_RESTART"
         },
         {
           "description": "Go to the next playlist item.",
           "enumIdentifier": "OBS_WEBSOCKET_MEDIA_INPUT_ACTION_NEXT",
-          "rpcVersion": 1,
-          "deprecated": true,
+          "rpcVersion": "1",
+          "deprecated": false,
           "initialVersion": "5.0.0",
           "enumValue": "OBS_WEBSOCKET_MEDIA_INPUT_ACTION_NEXT"
         },
         {
           "description": "Go to the previous playlist item.",
           "enumIdentifier": "OBS_WEBSOCKET_MEDIA_INPUT_ACTION_PREVIOUS",
-          "rpcVersion": 1,
-          "deprecated": true,
+          "rpcVersion": "1",
+          "deprecated": false,
           "initialVersion": "5.0.0",
           "enumValue": "OBS_WEBSOCKET_MEDIA_INPUT_ACTION_PREVIOUS"
         }
@@ -1218,7 +1225,7 @@
     {
       "description": "Gets the current directory that the record output is set to.",
       "requestType": "GetRecordDirectory",
-      "complexity": 1,
+      "complexity": 2,
       "rpcVersion": "1",
       "deprecated": false,
       "initialVersion": "5.0.0",
@@ -1229,6 +1236,43 @@
           "valueName": "recordDirectory",
           "valueType": "String",
           "valueDescription": "Output directory"
+        }
+      ]
+    },
+    {
+      "description": "Sets the current directory that the record output writes files to.",
+      "requestType": "SetRecordDirectory",
+      "complexity": 2,
+      "rpcVersion": "1",
+      "deprecated": false,
+      "initialVersion": "5.3.0",
+      "category": "config",
+      "requestFields": [
+        {
+          "valueName": "recordDirectory",
+          "valueType": "String",
+          "valueDescription": "Output directory",
+          "valueRestrictions": null,
+          "valueOptional": false,
+          "valueOptionalBehavior": null
+        }
+      ],
+      "responseFields": []
+    },
+    {
+      "description": "Gets an array of all available source filter kinds.\n\nSimilar to `GetInputKindList`",
+      "requestType": "GetSourceFilterKindList",
+      "complexity": 2,
+      "rpcVersion": "1",
+      "deprecated": false,
+      "initialVersion": "5.4.0",
+      "category": "filters",
+      "requestFields": [],
+      "responseFields": [
+        {
+          "valueName": "sourceFilterKinds",
+          "valueType": "Array<String>",
+          "valueDescription": "Array of source filter kinds"
         }
       ]
     },
@@ -1246,8 +1290,16 @@
           "valueType": "String",
           "valueDescription": "Name of the source",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sourceUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the source",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         }
       ],
       "responseFields": [
@@ -1298,8 +1350,16 @@
           "valueType": "String",
           "valueDescription": "Name of the source to add the filter to",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sourceUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the source to add the filter to",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "filterName",
@@ -1342,8 +1402,16 @@
           "valueType": "String",
           "valueDescription": "Name of the source the filter is on",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sourceUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the source the filter is on",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "filterName",
@@ -1370,8 +1438,16 @@
           "valueType": "String",
           "valueDescription": "Name of the source the filter is on",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sourceUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the source the filter is on",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "filterName",
@@ -1406,8 +1482,16 @@
           "valueType": "String",
           "valueDescription": "Name of the source",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sourceUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the source",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "filterName",
@@ -1455,8 +1539,16 @@
           "valueType": "String",
           "valueDescription": "Name of the source the filter is on",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sourceUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the source the filter is on",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "filterName",
@@ -1491,8 +1583,16 @@
           "valueType": "String",
           "valueDescription": "Name of the source the filter is on",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sourceUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the source the filter is on",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "filterName",
@@ -1535,8 +1635,16 @@
           "valueType": "String",
           "valueDescription": "Name of the source the filter is on",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sourceUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the source the filter is on",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "filterName",
@@ -1744,9 +1852,9 @@
       ]
     },
     {
-      "description": "Gets an array of all hotkey names in OBS",
+      "description": "Gets an array of all hotkey names in OBS.\n\nNote: Hotkey functionality in obs-websocket comes as-is, and we do not guarantee support if things are broken. In 9/10 usages of hotkey requests, there exists a better, more reliable method via other requests.",
       "requestType": "GetHotkeyList",
-      "complexity": 3,
+      "complexity": 4,
       "rpcVersion": "1",
       "deprecated": false,
       "initialVersion": "5.0.0",
@@ -1761,9 +1869,9 @@
       ]
     },
     {
-      "description": "Triggers a hotkey using its name. See `GetHotkeyList`",
+      "description": "Triggers a hotkey using its name. See `GetHotkeyList`.\n\nNote: Hotkey functionality in obs-websocket comes as-is, and we do not guarantee support if things are broken. In 9/10 usages of hotkey requests, there exists a better, more reliable method via other requests.",
       "requestType": "TriggerHotkeyByName",
-      "complexity": 3,
+      "complexity": 4,
       "rpcVersion": "1",
       "deprecated": false,
       "initialVersion": "5.0.0",
@@ -1776,12 +1884,20 @@
           "valueRestrictions": null,
           "valueOptional": false,
           "valueOptionalBehavior": null
+        },
+        {
+          "valueName": "contextName",
+          "valueType": "String",
+          "valueDescription": "Name of context of the hotkey to trigger",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         }
       ],
       "responseFields": []
     },
     {
-      "description": "Triggers a hotkey using a sequence of keys.",
+      "description": "Triggers a hotkey using a sequence of keys.\n\nNote: Hotkey functionality in obs-websocket comes as-is, and we do not guarantee support if things are broken. In 9/10 usages of hotkey requests, there exists a better, more reliable method via other requests.",
       "requestType": "TriggerHotkeyByKeySequence",
       "complexity": 4,
       "rpcVersion": "1",
@@ -1976,8 +2092,16 @@
           "valueType": "String",
           "valueDescription": "Name of the scene to add the input to as a scene item",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the scene to add the input to as a scene item",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "inputName",
@@ -2014,6 +2138,11 @@
       ],
       "responseFields": [
         {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the newly created input"
+        },
+        {
           "valueName": "sceneItemId",
           "valueType": "Number",
           "valueDescription": "ID of the newly created scene item"
@@ -2034,8 +2163,16 @@
           "valueType": "String",
           "valueDescription": "Name of the input to remove",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input to remove",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         }
       ],
       "responseFields": []
@@ -2054,8 +2191,16 @@
           "valueType": "String",
           "valueDescription": "Current input name",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "Current input UUID",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "newInputName",
@@ -2108,8 +2253,16 @@
           "valueType": "String",
           "valueDescription": "Name of the input to get the settings of",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input to get the settings of",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         }
       ],
       "responseFields": [
@@ -2139,8 +2292,16 @@
           "valueType": "String",
           "valueDescription": "Name of the input to set the settings of",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input to set the settings of",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "inputSettings",
@@ -2175,8 +2336,16 @@
           "valueType": "String",
           "valueDescription": "Name of input to get the mute state of",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of input to get the mute state of",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         }
       ],
       "responseFields": [
@@ -2201,8 +2370,16 @@
           "valueType": "String",
           "valueDescription": "Name of the input to set the mute state of",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input to set the mute state of",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "inputMuted",
@@ -2229,8 +2406,16 @@
           "valueType": "String",
           "valueDescription": "Name of the input to toggle the mute state of",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input to toggle the mute state of",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         }
       ],
       "responseFields": [
@@ -2255,8 +2440,16 @@
           "valueType": "String",
           "valueDescription": "Name of the input to get the volume of",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input to get the volume of",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         }
       ],
       "responseFields": [
@@ -2286,8 +2479,16 @@
           "valueType": "String",
           "valueDescription": "Name of the input to set the volume of",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input to set the volume of",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "inputVolumeMul",
@@ -2322,8 +2523,16 @@
           "valueType": "String",
           "valueDescription": "Name of the input to get the audio balance of",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input to get the audio balance of",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         }
       ],
       "responseFields": [
@@ -2348,8 +2557,16 @@
           "valueType": "String",
           "valueDescription": "Name of the input to set the audio balance of",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input to set the audio balance of",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "inputAudioBalance",
@@ -2376,8 +2593,16 @@
           "valueType": "String",
           "valueDescription": "Name of the input to get the audio sync offset of",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input to get the audio sync offset of",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         }
       ],
       "responseFields": [
@@ -2402,8 +2627,16 @@
           "valueType": "String",
           "valueDescription": "Name of the input to set the audio sync offset of",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input to set the audio sync offset of",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "inputAudioSyncOffset",
@@ -2430,8 +2663,16 @@
           "valueType": "String",
           "valueDescription": "Name of the input to get the audio monitor type of",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input to get the audio monitor type of",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         }
       ],
       "responseFields": [
@@ -2456,8 +2697,16 @@
           "valueType": "String",
           "valueDescription": "Name of the input to set the audio monitor type of",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input to set the audio monitor type of",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "monitorType",
@@ -2484,8 +2733,16 @@
           "valueType": "String",
           "valueDescription": "Name of the input",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         }
       ],
       "responseFields": [
@@ -2510,13 +2767,161 @@
           "valueType": "String",
           "valueDescription": "Name of the input",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "inputAudioTracks",
           "valueType": "Object",
           "valueDescription": "Track settings to apply",
+          "valueRestrictions": null,
+          "valueOptional": false,
+          "valueOptionalBehavior": null
+        }
+      ],
+      "responseFields": []
+    },
+    {
+      "description": "Gets the deinterlace mode of an input.\n\nDeinterlace Modes:\n\n- `OBS_DEINTERLACE_MODE_DISABLE`\n- `OBS_DEINTERLACE_MODE_DISCARD`\n- `OBS_DEINTERLACE_MODE_RETRO`\n- `OBS_DEINTERLACE_MODE_BLEND`\n- `OBS_DEINTERLACE_MODE_BLEND_2X`\n- `OBS_DEINTERLACE_MODE_LINEAR`\n- `OBS_DEINTERLACE_MODE_LINEAR_2X`\n- `OBS_DEINTERLACE_MODE_YADIF`\n- `OBS_DEINTERLACE_MODE_YADIF_2X`\n\nNote: Deinterlacing functionality is restricted to async inputs only.",
+      "requestType": "GetInputDeinterlaceMode",
+      "complexity": 2,
+      "rpcVersion": "1",
+      "deprecated": false,
+      "initialVersion": "5.6.0",
+      "category": "inputs",
+      "requestFields": [
+        {
+          "valueName": "inputName",
+          "valueType": "String",
+          "valueDescription": "Name of the input",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        }
+      ],
+      "responseFields": [
+        {
+          "valueName": "inputDeinterlaceMode",
+          "valueType": "String",
+          "valueDescription": "Deinterlace mode of the input"
+        }
+      ]
+    },
+    {
+      "description": "Sets the deinterlace mode of an input.\n\nNote: Deinterlacing functionality is restricted to async inputs only.",
+      "requestType": "SetInputDeinterlaceMode",
+      "complexity": 2,
+      "rpcVersion": "1",
+      "deprecated": false,
+      "initialVersion": "5.6.0",
+      "category": "inputs",
+      "requestFields": [
+        {
+          "valueName": "inputName",
+          "valueType": "String",
+          "valueDescription": "Name of the input",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputDeinterlaceMode",
+          "valueType": "String",
+          "valueDescription": "Deinterlace mode for the input",
+          "valueRestrictions": null,
+          "valueOptional": false,
+          "valueOptionalBehavior": null
+        }
+      ],
+      "responseFields": []
+    },
+    {
+      "description": "Gets the deinterlace field order of an input.\n\nDeinterlace Field Orders:\n\n- `OBS_DEINTERLACE_FIELD_ORDER_TOP`\n- `OBS_DEINTERLACE_FIELD_ORDER_BOTTOM`\n\nNote: Deinterlacing functionality is restricted to async inputs only.",
+      "requestType": "GetInputDeinterlaceFieldOrder",
+      "complexity": 2,
+      "rpcVersion": "1",
+      "deprecated": false,
+      "initialVersion": "5.6.0",
+      "category": "inputs",
+      "requestFields": [
+        {
+          "valueName": "inputName",
+          "valueType": "String",
+          "valueDescription": "Name of the input",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        }
+      ],
+      "responseFields": [
+        {
+          "valueName": "inputDeinterlaceFieldOrder",
+          "valueType": "String",
+          "valueDescription": "Deinterlace field order of the input"
+        }
+      ]
+    },
+    {
+      "description": "Sets the deinterlace field order of an input.\n\nNote: Deinterlacing functionality is restricted to async inputs only.",
+      "requestType": "SetInputDeinterlaceFieldOrder",
+      "complexity": 2,
+      "rpcVersion": "1",
+      "deprecated": false,
+      "initialVersion": "5.6.0",
+      "category": "inputs",
+      "requestFields": [
+        {
+          "valueName": "inputName",
+          "valueType": "String",
+          "valueDescription": "Name of the input",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputDeinterlaceFieldOrder",
+          "valueType": "String",
+          "valueDescription": "Deinterlace field order for the input",
           "valueRestrictions": null,
           "valueOptional": false,
           "valueOptionalBehavior": null
@@ -2538,8 +2943,16 @@
           "valueType": "String",
           "valueDescription": "Name of the input",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "propertyName",
@@ -2572,8 +2985,16 @@
           "valueType": "String",
           "valueDescription": "Name of the input",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "propertyName",
@@ -2600,8 +3021,16 @@
           "valueType": "String",
           "valueDescription": "Name of the media input",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the media input",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         }
       ],
       "responseFields": [
@@ -2636,8 +3065,16 @@
           "valueType": "String",
           "valueDescription": "Name of the media input",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the media input",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "mediaCursor",
@@ -2664,8 +3101,16 @@
           "valueType": "String",
           "valueDescription": "Name of the media input",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the media input",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "mediaCursorOffset",
@@ -2692,8 +3137,16 @@
           "valueType": "String",
           "valueDescription": "Name of the media input",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the media input",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "mediaAction",
@@ -3090,7 +3543,13 @@
       "initialVersion": "5.0.0",
       "category": "record",
       "requestFields": [],
-      "responseFields": []
+      "responseFields": [
+        {
+          "valueName": "outputActive",
+          "valueType": "Boolean",
+          "valueDescription": "The new active state of the output"
+        }
+      ]
     },
     {
       "description": "Starts the record output.",
@@ -3154,6 +3613,37 @@
       "responseFields": []
     },
     {
+      "description": "Splits the current file being recorded into a new file.",
+      "requestType": "SplitRecordFile",
+      "complexity": 2,
+      "rpcVersion": "1",
+      "deprecated": false,
+      "initialVersion": "5.5.0",
+      "category": "record",
+      "requestFields": [],
+      "responseFields": []
+    },
+    {
+      "description": "Adds a new chapter marker to the file currently being recorded.\n\nNote: As of OBS 30.2.0, the only file format supporting this feature is Hybrid MP4.",
+      "requestType": "CreateRecordChapter",
+      "complexity": 2,
+      "rpcVersion": "1",
+      "deprecated": false,
+      "initialVersion": "5.5.0",
+      "category": "record",
+      "requestFields": [
+        {
+          "valueName": "chapterName",
+          "valueType": "String",
+          "valueDescription": "Name of the new chapter",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        }
+      ],
+      "responseFields": []
+    },
+    {
       "description": "Gets a list of all scene items in a scene.\n\nScenes only",
       "requestType": "GetSceneItemList",
       "complexity": 3,
@@ -3167,8 +3657,16 @@
           "valueType": "String",
           "valueDescription": "Name of the scene to get the items of",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the scene to get the items of",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         }
       ],
       "responseFields": [
@@ -3193,8 +3691,16 @@
           "valueType": "String",
           "valueDescription": "Name of the group to get the items of",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the group to get the items of",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         }
       ],
       "responseFields": [
@@ -3219,8 +3725,16 @@
           "valueType": "String",
           "valueDescription": "Name of the scene or group to search in",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the scene or group to search in",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "sourceName",
@@ -3248,6 +3762,53 @@
       ]
     },
     {
+      "description": "Gets the source associated with a scene item.",
+      "requestType": "GetSceneItemSource",
+      "complexity": 3,
+      "rpcVersion": "1",
+      "deprecated": false,
+      "initialVersion": "5.4.0",
+      "category": "scene items",
+      "requestFields": [
+        {
+          "valueName": "sceneName",
+          "valueType": "String",
+          "valueDescription": "Name of the scene the item is in",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the scene the item is in",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sceneItemId",
+          "valueType": "Number",
+          "valueDescription": "Numeric ID of the scene item",
+          "valueRestrictions": ">= 0",
+          "valueOptional": false,
+          "valueOptionalBehavior": null
+        }
+      ],
+      "responseFields": [
+        {
+          "valueName": "sourceName",
+          "valueType": "String",
+          "valueDescription": "Name of the source associated with the scene item"
+        },
+        {
+          "valueName": "sourceUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the source associated with the scene item"
+        }
+      ]
+    },
+    {
       "description": "Creates a new scene item using a source.\n\nScenes only",
       "requestType": "CreateSceneItem",
       "complexity": 3,
@@ -3261,16 +3822,32 @@
           "valueType": "String",
           "valueDescription": "Name of the scene to create the new item in",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the scene to create the new item in",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "sourceName",
           "valueType": "String",
           "valueDescription": "Name of the source to add to the scene",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sourceUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the source to add to the scene",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "sceneItemEnabled",
@@ -3303,8 +3880,16 @@
           "valueType": "String",
           "valueDescription": "Name of the scene the item is in",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the scene the item is in",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "sceneItemId",
@@ -3331,8 +3916,16 @@
           "valueType": "String",
           "valueDescription": "Name of the scene the item is in",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the scene the item is in",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "sceneItemId",
@@ -3348,7 +3941,15 @@
           "valueDescription": "Name of the scene to create the duplicated item in",
           "valueRestrictions": null,
           "valueOptional": true,
-          "valueOptionalBehavior": "`sceneName` is assumed"
+          "valueOptionalBehavior": "From scene is assumed"
+        },
+        {
+          "valueName": "destinationSceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the scene to create the duplicated item in",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "From scene is assumed"
         }
       ],
       "responseFields": [
@@ -3373,8 +3974,16 @@
           "valueType": "String",
           "valueDescription": "Name of the scene the item is in",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the scene the item is in",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "sceneItemId",
@@ -3407,8 +4016,16 @@
           "valueType": "String",
           "valueDescription": "Name of the scene the item is in",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the scene the item is in",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "sceneItemId",
@@ -3443,8 +4060,16 @@
           "valueType": "String",
           "valueDescription": "Name of the scene the item is in",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the scene the item is in",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "sceneItemId",
@@ -3477,8 +4102,16 @@
           "valueType": "String",
           "valueDescription": "Name of the scene the item is in",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the scene the item is in",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "sceneItemId",
@@ -3513,8 +4146,16 @@
           "valueType": "String",
           "valueDescription": "Name of the scene the item is in",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the scene the item is in",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "sceneItemId",
@@ -3547,8 +4188,16 @@
           "valueType": "String",
           "valueDescription": "Name of the scene the item is in",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the scene the item is in",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "sceneItemId",
@@ -3583,8 +4232,16 @@
           "valueType": "String",
           "valueDescription": "Name of the scene the item is in",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the scene the item is in",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "sceneItemId",
@@ -3617,8 +4274,16 @@
           "valueType": "String",
           "valueDescription": "Name of the scene the item is in",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the scene the item is in",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "sceneItemId",
@@ -3653,8 +4318,16 @@
           "valueType": "String",
           "valueDescription": "Name of the scene the item is in",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the scene the item is in",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "sceneItemId",
@@ -3687,8 +4360,16 @@
           "valueType": "String",
           "valueDescription": "Name of the scene the item is in",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the scene the item is in",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "sceneItemId",
@@ -3722,12 +4403,22 @@
         {
           "valueName": "currentProgramSceneName",
           "valueType": "String",
-          "valueDescription": "Current program scene"
+          "valueDescription": "Current program scene name. Can be `null` if internal state desync"
+        },
+        {
+          "valueName": "currentProgramSceneUuid",
+          "valueType": "String",
+          "valueDescription": "Current program scene UUID. Can be `null` if internal state desync"
         },
         {
           "valueName": "currentPreviewSceneName",
           "valueType": "String",
-          "valueDescription": "Current preview scene. `null` if not in studio mode"
+          "valueDescription": "Current preview scene name. `null` if not in studio mode"
+        },
+        {
+          "valueName": "currentPreviewSceneUuid",
+          "valueType": "String",
+          "valueDescription": "Current preview scene UUID. `null` if not in studio mode"
         },
         {
           "valueName": "scenes",
@@ -3754,7 +4445,7 @@
       ]
     },
     {
-      "description": "Gets the current program scene.",
+      "description": "Gets the current program scene.\n\nNote: This request is slated to have the `currentProgram`-prefixed fields removed from in an upcoming RPC version.",
       "requestType": "GetCurrentProgramScene",
       "complexity": 1,
       "rpcVersion": "1",
@@ -3764,9 +4455,24 @@
       "requestFields": [],
       "responseFields": [
         {
+          "valueName": "sceneName",
+          "valueType": "String",
+          "valueDescription": "Current program scene name"
+        },
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "Current program scene UUID"
+        },
+        {
           "valueName": "currentProgramSceneName",
           "valueType": "String",
-          "valueDescription": "Current program scene"
+          "valueDescription": "Current program scene name (Deprecated)"
+        },
+        {
+          "valueName": "currentProgramSceneUuid",
+          "valueType": "String",
+          "valueDescription": "Current program scene UUID (Deprecated)"
         }
       ]
     },
@@ -3782,16 +4488,24 @@
         {
           "valueName": "sceneName",
           "valueType": "String",
-          "valueDescription": "Scene to set as the current program scene",
+          "valueDescription": "Scene name to set as the current program scene",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "Scene UUID to set as the current program scene",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         }
       ],
       "responseFields": []
     },
     {
-      "description": "Gets the current preview scene.\n\nOnly available when studio mode is enabled.",
+      "description": "Gets the current preview scene.\n\nOnly available when studio mode is enabled.\n\nNote: This request is slated to have the `currentPreview`-prefixed fields removed from in an upcoming RPC version.",
       "requestType": "GetCurrentPreviewScene",
       "complexity": 1,
       "rpcVersion": "1",
@@ -3801,9 +4515,24 @@
       "requestFields": [],
       "responseFields": [
         {
+          "valueName": "sceneName",
+          "valueType": "String",
+          "valueDescription": "Current preview scene name"
+        },
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "Current preview scene UUID"
+        },
+        {
           "valueName": "currentPreviewSceneName",
           "valueType": "String",
-          "valueDescription": "Current preview scene"
+          "valueDescription": "Current preview scene name"
+        },
+        {
+          "valueName": "currentPreviewSceneUuid",
+          "valueType": "String",
+          "valueDescription": "Current preview scene UUID"
         }
       ]
     },
@@ -3819,10 +4548,18 @@
         {
           "valueName": "sceneName",
           "valueType": "String",
-          "valueDescription": "Scene to set as the current preview scene",
+          "valueDescription": "Scene name to set as the current preview scene",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "Scene UUID to set as the current preview scene",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         }
       ],
       "responseFields": []
@@ -3845,7 +4582,13 @@
           "valueOptionalBehavior": null
         }
       ],
-      "responseFields": []
+      "responseFields": [
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the created scene"
+        }
+      ]
     },
     {
       "description": "Removes a scene from OBS.",
@@ -3861,8 +4604,16 @@
           "valueType": "String",
           "valueDescription": "Name of the scene to remove",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the scene to remove",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         }
       ],
       "responseFields": []
@@ -3881,8 +4632,16 @@
           "valueType": "String",
           "valueDescription": "Name of the scene to be renamed",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the scene to be renamed",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "newSceneName",
@@ -3896,7 +4655,7 @@
       "responseFields": []
     },
     {
-      "description": "Gets the scene transition overridden for a scene.",
+      "description": "Gets the scene transition overridden for a scene.\n\nNote: A transition UUID response field is not currently able to be implemented as of 2024-1-18.",
       "requestType": "GetSceneSceneTransitionOverride",
       "complexity": 2,
       "rpcVersion": "1",
@@ -3909,8 +4668,16 @@
           "valueType": "String",
           "valueDescription": "Name of the scene",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the scene",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         }
       ],
       "responseFields": [
@@ -3927,7 +4694,7 @@
       ]
     },
     {
-      "description": "Gets the scene transition overridden for a scene.",
+      "description": "Sets the scene transition overridden for a scene.",
       "requestType": "SetSceneSceneTransitionOverride",
       "complexity": 2,
       "rpcVersion": "1",
@@ -3940,8 +4707,16 @@
           "valueType": "String",
           "valueDescription": "Name of the scene",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the scene",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "transitionName",
@@ -3976,8 +4751,16 @@
           "valueType": "String",
           "valueDescription": "Name of the source to get the active state of",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sourceUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the source to get the active state of",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         }
       ],
       "responseFields": [
@@ -4007,8 +4790,16 @@
           "valueType": "String",
           "valueDescription": "Name of the source to take a screenshot of",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sourceUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the source to take a screenshot of",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "imageFormat",
@@ -4065,8 +4856,16 @@
           "valueType": "String",
           "valueDescription": "Name of the source to take a screenshot of",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sourceUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the source to take a screenshot of",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "imageFormat",
@@ -4109,13 +4908,7 @@
           "valueOptionalBehavior": "-1"
         }
       ],
-      "responseFields": [
-        {
-          "valueName": "imageData",
-          "valueType": "String",
-          "valueDescription": "Base64-encoded screenshot"
-        }
-      ]
+      "responseFields": []
     },
     {
       "description": "Gets the status of the stream output.",
@@ -4261,6 +5054,11 @@
           "valueDescription": "Name of the current scene transition. Can be null"
         },
         {
+          "valueName": "currentSceneTransitionUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the current scene transition. Can be null"
+        },
+        {
           "valueName": "currentSceneTransitionKind",
           "valueType": "String",
           "valueDescription": "Kind of the current scene transition. Can be null"
@@ -4286,6 +5084,11 @@
           "valueName": "transitionName",
           "valueType": "String",
           "valueDescription": "Name of the transition"
+        },
+        {
+          "valueName": "transitionUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the transition"
         },
         {
           "valueName": "transitionKind",
@@ -4489,8 +5292,16 @@
           "valueType": "String",
           "valueDescription": "Name of the input to open the dialog of",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input to open the dialog of",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         }
       ],
       "responseFields": []
@@ -4509,8 +5320,16 @@
           "valueType": "String",
           "valueDescription": "Name of the input to open the dialog of",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input to open the dialog of",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         }
       ],
       "responseFields": []
@@ -4529,8 +5348,16 @@
           "valueType": "String",
           "valueDescription": "Name of the input to open the dialog of",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input to open the dialog of",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         }
       ],
       "responseFields": []
@@ -4602,8 +5429,16 @@
           "valueType": "String",
           "valueDescription": "Name of the source to open a projector for",
           "valueRestrictions": null,
-          "valueOptional": false,
-          "valueOptionalBehavior": null
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
+        },
+        {
+          "valueName": "sourceUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the source to open a projector for",
+          "valueRestrictions": null,
+          "valueOptional": true,
+          "valueOptionalBehavior": "Unknown"
         },
         {
           "valueName": "monitorIndex",
@@ -4842,6 +5677,33 @@
       ]
     },
     {
+      "description": "An source filter's settings have changed (been updated).",
+      "eventType": "SourceFilterSettingsChanged",
+      "eventSubscription": "Filters",
+      "complexity": 3,
+      "rpcVersion": "1",
+      "deprecated": false,
+      "initialVersion": "5.4.0",
+      "category": "filters",
+      "dataFields": [
+        {
+          "valueName": "sourceName",
+          "valueType": "String",
+          "valueDescription": "Name of the source the filter is on"
+        },
+        {
+          "valueName": "filterName",
+          "valueType": "String",
+          "valueDescription": "Name of the filter"
+        },
+        {
+          "valueName": "filterSettings",
+          "valueType": "Object",
+          "valueDescription": "New settings object of the filter"
+        }
+      ]
+    },
+    {
       "description": "A source filter's enable state has changed.",
       "eventType": "SourceFilterEnableStateChanged",
       "eventSubscription": "Filters",
@@ -4895,6 +5757,11 @@
           "valueDescription": "Name of the input"
         },
         {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input"
+        },
+        {
           "valueName": "inputKind",
           "valueType": "String",
           "valueDescription": "The kind of the input"
@@ -4903,6 +5770,11 @@
           "valueName": "unversionedInputKind",
           "valueType": "String",
           "valueDescription": "The unversioned kind of input (aka no `_v2` stuff)"
+        },
+        {
+          "valueName": "inputKindCaps",
+          "valueType": "Number",
+          "valueDescription": "Bitflag value for the caps that an input supports. See obs_source_info.output_flags in the libobs docs"
         },
         {
           "valueName": "inputSettings",
@@ -4930,6 +5802,11 @@
           "valueName": "inputName",
           "valueType": "String",
           "valueDescription": "Name of the input"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input"
         }
       ]
     },
@@ -4944,6 +5821,11 @@
       "category": "inputs",
       "dataFields": [
         {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input"
+        },
+        {
           "valueName": "oldInputName",
           "valueType": "String",
           "valueDescription": "Old name of the input"
@@ -4952,6 +5834,33 @@
           "valueName": "inputName",
           "valueType": "String",
           "valueDescription": "New name of the input"
+        }
+      ]
+    },
+    {
+      "description": "An input's settings have changed (been updated).\n\nNote: On some inputs, changing values in the properties dialog will cause an immediate update. Pressing the \"Cancel\" button will revert the settings, resulting in another event being fired.",
+      "eventType": "InputSettingsChanged",
+      "eventSubscription": "Inputs",
+      "complexity": 3,
+      "rpcVersion": "1",
+      "deprecated": false,
+      "initialVersion": "5.4.0",
+      "category": "inputs",
+      "dataFields": [
+        {
+          "valueName": "inputName",
+          "valueType": "String",
+          "valueDescription": "Name of the input"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input"
+        },
+        {
+          "valueName": "inputSettings",
+          "valueType": "Object",
+          "valueDescription": "New settings object of the input"
         }
       ]
     },
@@ -4969,6 +5878,11 @@
           "valueName": "inputName",
           "valueType": "String",
           "valueDescription": "Name of the input"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input"
         },
         {
           "valueName": "videoActive",
@@ -4993,6 +5907,11 @@
           "valueDescription": "Name of the input"
         },
         {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input"
+        },
+        {
           "valueName": "videoShowing",
           "valueType": "Boolean",
           "valueDescription": "Whether the input is showing"
@@ -5015,6 +5934,11 @@
           "valueDescription": "Name of the input"
         },
         {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input"
+        },
+        {
           "valueName": "inputMuted",
           "valueType": "Boolean",
           "valueDescription": "Whether the input is muted"
@@ -5035,6 +5959,11 @@
           "valueName": "inputName",
           "valueType": "String",
           "valueDescription": "Name of the input"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input"
         },
         {
           "valueName": "inputVolumeMul",
@@ -5061,7 +5990,12 @@
         {
           "valueName": "inputName",
           "valueType": "String",
-          "valueDescription": "Name of the affected input"
+          "valueDescription": "Name of the input"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input"
         },
         {
           "valueName": "inputAudioBalance",
@@ -5086,6 +6020,11 @@
           "valueDescription": "Name of the input"
         },
         {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input"
+        },
+        {
           "valueName": "inputAudioSyncOffset",
           "valueType": "Number",
           "valueDescription": "New sync offset in milliseconds"
@@ -5108,6 +6047,11 @@
           "valueDescription": "Name of the input"
         },
         {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input"
+        },
+        {
           "valueName": "inputAudioTracks",
           "valueType": "Object",
           "valueDescription": "Object of audio tracks along with their associated enable states"
@@ -5128,6 +6072,11 @@
           "valueName": "inputName",
           "valueType": "String",
           "valueDescription": "Name of the input"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input"
         },
         {
           "valueName": "monitorType",
@@ -5167,6 +6116,11 @@
           "valueName": "inputName",
           "valueType": "String",
           "valueDescription": "Name of the input"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input"
         }
       ]
     },
@@ -5184,6 +6138,11 @@
           "valueName": "inputName",
           "valueType": "String",
           "valueDescription": "Name of the input"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input"
         }
       ]
     },
@@ -5201,6 +6160,11 @@
           "valueName": "inputName",
           "valueType": "String",
           "valueDescription": "Name of the input"
+        },
+        {
+          "valueName": "inputUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the input"
         },
         {
           "valueName": "mediaAction",
@@ -5255,6 +6219,23 @@
           "valueName": "outputPath",
           "valueType": "String",
           "valueDescription": "File name for the saved recording, if record stopped. `null` otherwise"
+        }
+      ]
+    },
+    {
+      "description": "The record output has started writing to a new file. For example, when a file split happens.",
+      "eventType": "RecordFileChanged",
+      "eventSubscription": "Outputs",
+      "complexity": 2,
+      "rpcVersion": "1",
+      "deprecated": false,
+      "initialVersion": "5.5.0",
+      "category": "outputs",
+      "dataFields": [
+        {
+          "valueName": "newOutputPath",
+          "valueType": "String",
+          "valueDescription": "File name that the output has begun writing to"
         }
       ]
     },
@@ -5335,9 +6316,19 @@
           "valueDescription": "Name of the scene the item was added to"
         },
         {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the scene the item was added to"
+        },
+        {
           "valueName": "sourceName",
           "valueType": "String",
           "valueDescription": "Name of the underlying source (input/scene)"
+        },
+        {
+          "valueName": "sourceUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the underlying source (input/scene)"
         },
         {
           "valueName": "sceneItemId",
@@ -5367,9 +6358,19 @@
           "valueDescription": "Name of the scene the item was removed from"
         },
         {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the scene the item was removed from"
+        },
+        {
           "valueName": "sourceName",
           "valueType": "String",
           "valueDescription": "Name of the underlying source (input/scene)"
+        },
+        {
+          "valueName": "sourceUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the underlying source (input/scene)"
         },
         {
           "valueName": "sceneItemId",
@@ -5394,6 +6395,11 @@
           "valueDescription": "Name of the scene"
         },
         {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the scene"
+        },
+        {
           "valueName": "sceneItems",
           "valueType": "Array<Object>",
           "valueDescription": "Array of scene item objects"
@@ -5414,6 +6420,11 @@
           "valueName": "sceneName",
           "valueType": "String",
           "valueDescription": "Name of the scene the item is in"
+        },
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the scene the item is in"
         },
         {
           "valueName": "sceneItemId",
@@ -5443,6 +6454,11 @@
           "valueDescription": "Name of the scene the item is in"
         },
         {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the scene the item is in"
+        },
+        {
           "valueName": "sceneItemId",
           "valueType": "Number",
           "valueDescription": "Numeric ID of the scene item"
@@ -5470,6 +6486,11 @@
           "valueDescription": "Name of the scene the item is in"
         },
         {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the scene the item is in"
+        },
+        {
           "valueName": "sceneItemId",
           "valueType": "Number",
           "valueDescription": "Numeric ID of the scene item"
@@ -5490,6 +6511,11 @@
           "valueName": "sceneName",
           "valueType": "String",
           "valueDescription": "The name of the scene the item is in"
+        },
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "The UUID of the scene the item is in"
         },
         {
           "valueName": "sceneItemId",
@@ -5519,6 +6545,11 @@
           "valueDescription": "Name of the new scene"
         },
         {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the new scene"
+        },
+        {
           "valueName": "isGroup",
           "valueType": "Boolean",
           "valueDescription": "Whether the new scene is a group"
@@ -5541,6 +6572,11 @@
           "valueDescription": "Name of the removed scene"
         },
         {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the removed scene"
+        },
+        {
           "valueName": "isGroup",
           "valueType": "Boolean",
           "valueDescription": "Whether the scene was a group"
@@ -5557,6 +6593,11 @@
       "initialVersion": "5.0.0",
       "category": "scenes",
       "dataFields": [
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the scene"
+        },
         {
           "valueName": "oldSceneName",
           "valueType": "String",
@@ -5583,6 +6624,11 @@
           "valueName": "sceneName",
           "valueType": "String",
           "valueDescription": "Name of the scene that was switched to"
+        },
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the scene that was switched to"
         }
       ]
     },
@@ -5600,6 +6646,11 @@
           "valueName": "sceneName",
           "valueType": "String",
           "valueDescription": "Name of the scene that was switched to"
+        },
+        {
+          "valueName": "sceneUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the scene that was switched to"
         }
       ]
     },
@@ -5634,6 +6685,11 @@
           "valueName": "transitionName",
           "valueType": "String",
           "valueDescription": "Name of the new transition"
+        },
+        {
+          "valueName": "transitionUuid",
+          "valueType": "String",
+          "valueDescription": "UUID of the new transition"
         }
       ]
     },
@@ -5668,6 +6724,11 @@
           "valueName": "transitionName",
           "valueType": "String",
           "valueDescription": "Scene transition name"
+        },
+        {
+          "valueName": "transitionUuid",
+          "valueType": "String",
+          "valueDescription": "Scene transition UUID"
         }
       ]
     },
@@ -5685,6 +6746,11 @@
           "valueName": "transitionName",
           "valueType": "String",
           "valueDescription": "Scene transition name"
+        },
+        {
+          "valueName": "transitionUuid",
+          "valueType": "String",
+          "valueDescription": "Scene transition UUID"
         }
       ]
     },
@@ -5702,6 +6768,11 @@
           "valueName": "transitionName",
           "valueType": "String",
           "valueDescription": "Scene transition name"
+        },
+        {
+          "valueName": "transitionUuid",
+          "valueType": "String",
+          "valueDescription": "Scene transition UUID"
         }
       ]
     },
