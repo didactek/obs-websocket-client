@@ -8,7 +8,7 @@ webservices API.
 ## Overview
 
 OBSProtocolConverter is designed to be used as a Swift Package Manager
-plug-in to generate Swift sources and documentation for Othe BSWebsocket
+plug-in to generate Swift sources and documentation for the OBSWebsocket
 and OBSAsyncAPI libraries.
 
 OBSProtocolConverter can produce output for:

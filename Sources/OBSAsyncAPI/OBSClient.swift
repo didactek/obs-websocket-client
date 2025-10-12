@@ -36,7 +36,7 @@ public enum APIError: Error {
 /// methods for using the websocket services.
 public actor OBSClient {
     
-    /// An encapsulation of parameters needed to connect ot OBS.
+    /// An encapsulation of parameters needed to connect to OBS.
     public struct ConnectionInfo: Codable, Equatable, Sendable  {
         /// Server hostname or address; "localhost" if nil.
         public var host: String?
@@ -135,12 +135,12 @@ public actor OBSClient {
         
     }
     
-    /// Disconnect a running websocket connection and clean up URLSession.
-    public func disconnect() async throws {
+    /// Disconnect from a websocket connection, if connected.
+    public func disconnect() async {
         guard isConnected.value else { return }
         guard let webSocketTask else { return }
         webSocketTask.cancel()
-        connectionClosed()
+        cleanupClosedConnection()
     }
     
     func resubscribe(to subscriptions: EventSubscription) {
@@ -221,7 +221,7 @@ public actor OBSClient {
             listenForMessages()
         case .failure(let error):
             logger.debug("Failure message from server: \(error)")
-            connectionClosed()
+            cleanupClosedConnection()
         }
     }
     
@@ -238,7 +238,7 @@ public actor OBSClient {
     }
     
     /// Clean up after a connection is closed.
-    func connectionClosed() {
+    func cleanupClosedConnection() {
         isConnected.value = false
         while let outstanding = pending.popFirst() {
             outstanding.value.resume(throwing: APIError.notConnected)
