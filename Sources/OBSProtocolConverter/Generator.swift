@@ -266,6 +266,7 @@ public struct Generator {
 
         - ``init(hostname:port:connectTimeout:password:eventSubscriptions:)``
         - ``connect()``
+        - ``disconnect()``
         - ``isConnected``
         - ``connectTimeout``
 
