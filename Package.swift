@@ -6,7 +6,8 @@ import PackageDescription
 let package = Package(
     name: "obs-websocket-client",
     platforms: [
-        .macOS(.v13)
+        .macOS(.v13),
+        .iOS(.v16),
     ],
     products: [
         .library(name: "OBSWebsocket", targets: ["OBSWebsocket"]),
@@ -53,7 +54,7 @@ let package = Package(
                     verb: "extract-obsclient-docc-extension",
                     description: "Create a documentation topic extension in OBSAsyncAPI to organize OBSClient functions by category in protocol.json"),
                 permissions: [
-                    .writeToPackageDirectory(reason: "Generate/refresh OBSAsyncAPI DocC topics for OBSClient.md")
+                    .writeToPackageDirectory(reason: "Generate/refresh OBSAsyncAPI DocC topics for OBSClient.md"),
                 ]
             ),
             dependencies: ["OBSProtocolConverter"]

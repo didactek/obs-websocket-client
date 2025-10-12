@@ -1,6 +1,6 @@
 //
 //  OBSAsyncAPI.swift
-//  
+//
 //
 //  Created by Kit Transue on 2022-09-02.
 //  Copyright © 2022 Kit Transue
@@ -40,7 +40,7 @@ public actor OBSClient {
     public struct ConnectionInfo: Codable, Equatable, Sendable  {
         /// Server hostname or address; "localhost" if nil.
         public var host: String?
-
+        
         /// Server port; 4455 if nil.
         public var port: Int?
         
@@ -60,7 +60,7 @@ public actor OBSClient {
             return url
         }
     }
-
+    
     var connectionSetup: ConnectionInfo
     
     /// Update connection information to use during ``connect()``.
@@ -110,9 +110,9 @@ public actor OBSClient {
     public func connect() async throws {
         // FIXME: create delegate to handle authentication errors; manage our own logging
         urlSession = URLSession(configuration: .default)
-
+        
         let wsURL = try connectionSetup.wsURL()
-
+        
         webSocketTask = urlSession!.webSocketTask(with: wsURL)
         webSocketTask!.resume()
         
@@ -133,6 +133,14 @@ public actor OBSClient {
                 .store(in: &subscriptions)
         }
         
+    }
+    
+    /// Disconnect a running websocket connection and clean up URLSession.
+    public func disconnect() async throws {
+        guard isConnected.value else { return }
+        guard let webSocketTask else { return }
+        webSocketTask.cancel()
+        connectionClosed()
     }
     
     func resubscribe(to subscriptions: EventSubscription) {
@@ -160,7 +168,7 @@ public actor OBSClient {
         
         self.connectTimeout = connectTimeout ?? .milliseconds(2_000)
         
- 
+        
         self.eventSubscriptions = eventSubscriptions
     }
     
@@ -216,7 +224,7 @@ public actor OBSClient {
             connectionClosed()
         }
     }
-
+    
     private func listenForMessages() {
         webSocketTask!.receive { [unowned self] result in
             // Confirm this explanation:
@@ -229,7 +237,7 @@ public actor OBSClient {
         }
     }
     
-    /// Clean up after a connection is closed
+    /// Clean up after a connection is closed.
     func connectionClosed() {
         isConnected.value = false
         while let outstanding = pending.popFirst() {
