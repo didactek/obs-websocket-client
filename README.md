@@ -122,3 +122,8 @@ that helped me with building and parsing the exchanged websocket messages.
 
 And of course: the OBS Project for making the incredibly useful,
 inspiring, and open source [OBS Studio](https://obsproject.com).
+
+
+### Contributors
+
+[Valentin Lehmann](https://github.com/valentinlehmann)
