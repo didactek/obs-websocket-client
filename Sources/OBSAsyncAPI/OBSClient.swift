@@ -1,6 +1,6 @@
 //
 //  OBSAsyncAPI.swift
-//  
+//
 //
 //  Created by Kit Transue on 2022-09-02.
 //  Copyright © 2022 Kit Transue
@@ -135,10 +135,10 @@ public actor OBSClient {
         
     }
     
-    /// Disconnect a running websocket connection and cleanup URLSession
+    /// Disconnect a running websocket connection and clean up URLSession.
     public func disconnect() async throws {
-        guard isConnected.value else {return}
-        guard let webSocketTask else {return}
+        guard isConnected.value else { return }
+        guard let webSocketTask else { return }
         webSocketTask.cancel()
         connectionClosed()
     }
@@ -168,7 +168,7 @@ public actor OBSClient {
         
         self.connectTimeout = connectTimeout ?? .milliseconds(2_000)
         
- 
+        
         self.eventSubscriptions = eventSubscriptions
     }
     
@@ -224,7 +224,7 @@ public actor OBSClient {
             connectionClosed()
         }
     }
-
+    
     private func listenForMessages() {
         webSocketTask!.receive { [unowned self] result in
             // Confirm this explanation:
@@ -237,7 +237,7 @@ public actor OBSClient {
         }
     }
     
-    /// Clean up after a connection is closed
+    /// Clean up after a connection is closed.
     func connectionClosed() {
         isConnected.value = false
         while let outstanding = pending.popFirst() {
